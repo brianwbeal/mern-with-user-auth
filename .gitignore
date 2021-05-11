@@ -1,0 +1,10 @@
+/config
+/node_modules
+
+/client/node_modules
+/client/.pnp
+/client/.pnp.js
+
+.DS_Store
+package-lock.json
+/client/package-lock.json

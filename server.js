@@ -23,6 +23,9 @@ db.on('error', console.error.bind(console, 'MongoDB Connection Error'))
 db.once('open', () => console.log(`successfully connected to MongoDB`))
 
 /* routes */
+//
+//
+//
 
 /* home route */
 app.get('/', (req,res) => {

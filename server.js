@@ -23,9 +23,9 @@ db.on('error', console.error.bind(console, 'MongoDB Connection Error'))
 db.once('open', () => console.log(`successfully connected to MongoDB`))
 
 /* routes */
-//
-//
-//
+app.use('/api/items', require('./routes/items'))
+app.use('/api/users', require('./routes/users'))
+app.use('/login', require('./routes/login'))
 
 /* home route */
 app.get('/', (req,res) => {

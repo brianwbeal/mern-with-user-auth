@@ -2,6 +2,10 @@ import React, { useContext, useState } from "react"
 
 import { context } from "./Context"
 
+import {
+    Link
+} from "react-router-dom"
+
 export const Login = (props) => {
 
     const data = useContext(context)
@@ -18,9 +22,9 @@ export const Login = (props) => {
     }
 
     return (
-        <div className="Login">
+        <div className="login">
             <h1>Log In</h1>
-            <p>{data.contextIsLoggedIn.toString()}</p>
+            {/* <p>{data.contextIsLoggedIn.toString()}</p> */}
             <form onSubmit={formLogInHandler}>
                 <input
                     type="text"
@@ -36,6 +40,7 @@ export const Login = (props) => {
                 />
                 <input type="submit" value="log in" />
             </form>
+            <Link to="/signup">Sign Up</Link>
         </div>
     )
 }

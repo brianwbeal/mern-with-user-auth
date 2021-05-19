@@ -23,9 +23,9 @@ export const Signup = (props) => {
     }
 
     return (
-        <div className="Signup">
+        <div className="signup">
             <h1>Sign Up</h1>
-            <p>{data.contextIsLoggedIn.toString()}</p>
+            {/* <p>{data.contextIsLoggedIn.toString()}</p> */}
             <form onSubmit={formSignUpHandler}>
                 <input
                     type="text"
@@ -47,7 +47,7 @@ export const Signup = (props) => {
                 />
                 <input type="submit" value="sign up" />
             </form>
-            <p>submitted: {submission}</p>
+            {/* <p>submitted: {submission}</p> */}
         </div>
     )
 }

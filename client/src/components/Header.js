@@ -11,29 +11,21 @@ export const Header = () => {
     const data = useContext(context)
 
     return (
-        <div>
-            <header className="header">
-                <div className="header-container">
-                    <div className="header-app">
-                        <h1>App</h1>
-                    </div>
-                    <div className="header-user">
-                        {
-                            data.contextIsLoggedIn
-                            ? <div><i className="fas fa-user-circle"></i></div>
-                            : <Link to="/login" >Login</Link>
-                        }
-                    </div>
-                    <div className="header-nav">
-                        <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/signup">Sign Up</Link></li>
-                            <li><Link to="/login">Login</Link></li>
-                            <li><Link to="/Profile">Profile</Link></li>
-                        </ul>
-                    </div>
+        <div className="header">
+            <div className="header-container">
+                <div className="header-space">
                 </div>
-            </header>
+                <div className="header-logo">
+                    <Link to="/">App</Link>
+                </div>
+                <div className="header-nav">
+                    {
+                        data.contextIsLoggedIn
+                        ? <Link to="/profile"><i class="far fa-user-circle"></i></Link>
+                        : <Link to="/login"><span>Login</span></Link>
+                    }
+                </div>
+            </div>
         </div>
     )
 }

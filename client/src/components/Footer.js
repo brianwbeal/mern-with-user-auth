@@ -1,9 +1,15 @@
-import React from "react"
+import React, { useContext } from "react"
 
-export const Footer = () => {
+import { context } from "./Context"
+
+export const Footer = (props) => {
+
+    const data = useContext(context)
+
     return (
-        <div className="Footer">
-            <p>footer</p>
+        <div className="footer">
+            {/* <h1>Footer</h1>
+            <p>{data.contextIsLoggedIn.toString()}</p> */}
         </div>
     )
 }
